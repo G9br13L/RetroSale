@@ -344,5 +344,105 @@
             height: 70px;
             background: #111827;
         }
+
+        /* === Roadmap Page Styles === */
+        /* === Roadmap Page Specific Fixes === */
+        body.roadmap-bg {
+            background:
+                linear-gradient(rgba(55, 65, 81, 0.7), rgba(55, 65, 81, 0.7)),
+                url('https://images.unsplash.com/photo-1616094399519-bfea34e3785f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        main.roadmap {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(31, 41, 55, 0.85);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        main.roadmap h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: #f9fafb;
+            border-bottom: 2px solid #4b5563;
+            padding-bottom: 0.25rem;
+        }
+
+        main.roadmap section {
+            margin-bottom: 2rem;
+        }
+
+        .roadmap {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Override moodboard card style for roadmap */
+        .roadmap .card {
+            width: 100%;
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            color: #f3f4f6;
+        }
+
+        .roadmap .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+        }
+
+        .roadmap .card h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #ffffff;
+        }
+
+        .roadmap .card p {
+            margin: 0.5rem 0 0.75rem;
+            font-size: 0.9rem;
+            color: #d1d5db;
+        }
+
+        .roadmap .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            border-radius: 9999px;
+            font-weight: bold;
+        }
+
+        .roadmap .done {
+            background: #065f46;
+            color: #d1fae5;
+        }
+
+        .roadmap .backlog {
+            background: #92400e;
+            color: #fef3c7;
+        }
+
+        .roadmap .notdone {
+            background: #991b1b;
+            color: #fee2e2;
+        }
+
+        .roadmap .date {
+            font-size: 0.75rem;
+            background: #374151;
+            color: #e5e7eb;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
     </style>
 </head>
