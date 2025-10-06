@@ -109,5 +109,68 @@
             display: flex;
             justify-content: space-between;
         }
+
+        /* === Signup Page Styles === */
+        body.signup-bg {
+            background-image: url('https://images.unsplash.com/photo-1625805866449-3589fe3f71a3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        }
+
+        .signup-box {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 380px;
+            backdrop-filter: blur(8px);
+        }
+
+        .signup-box h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .signup-box input {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            margin-bottom: 1.2rem;
+            border: none;
+            border-radius: 0.6rem;
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1.4;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .signup-box input:focus {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 0 2px #3b82f6;
+        }
+
+        .signup-box input::placeholder {
+            color: #d1d5db;
+        }
+
+        .signup-box .extra-links {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .signup-box .extra-links a {
+            font-size: 0.9rem;
+            color: #93c5fd;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .signup-box .extra-links a:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
     </style>
 </head>
