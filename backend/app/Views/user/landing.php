@@ -1,35 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RetroSale: Games and Consoles</title>
-</head>
+<?= view('components/head', ['title' => 'Games and Consoles']) ?>
 
-<body style="margin:0;padding:0;
-             background-image:url('https://plus.unsplash.com/premium_photo-1687854992749-e15cba89631d?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-             background-size:cover;
-             background-position:center;
-             background-repeat:no-repeat;
-             font-family:Arial, sans-serif;
-             color:#f9fafb;">
-
+<body>
     <!-- Header -->
     <?= view('components/header') ?>
 
-    <!-- Overlay container -->
-    <main style="background-color:rgba(59, 60, 60, 0.9);min-height:100vh;">
-
+    <main>
         <!-- Call To Action (CTA) -->
         <?= view('components/cta') ?>
 
-        <section style="padding:1rem 2.5rem;">
-            <h2 style="font-size:2rem; font-weight:700; text-align:center; margin-bottom:2rem;">
-                Featured Products
-            </h2>
+        <section class="featured-section">
+            <h2>Featured Products</h2>
 
-            <div class="gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto max-w-6xl">
+            <div class="product-grid">
                 <?= view('components/cards/card', [
                     'title' => 'PlayStation',
                     'excerpt' => 'Relive the golden age of 3D gaming with legendary PS consoles.',
@@ -44,19 +29,21 @@
 
                 <?= view('components/cards/card', [
                     'title' => 'Digicam',
-                    'excerpt' => 'Step back into the era of old cameras.',
+                    'excerpt' => 'Step back into the era of old cameras and capture new moments!',
                     'image' => 'https://images.unsplash.com/photo-1711289163428-75e546d9ffa8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                 ]) ?>
-            </div>
+
+                <?= view('components/cards/card', [
+                    'title' => 'Music Players',
+                    'excerpt' => 'Use old music players and take a listen with a fresh feel of nostalgia.',
+                    'image' => 'https://images.unsplash.com/photo-1611001716885-b3402558a62b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                ]) ?>
             </div>
         </section>
-
-
     </main>
 
     <!-- Footer -->
     <?= view('components/footer') ?>
-
 </body>
 
 </html>

@@ -6,7 +6,7 @@
 // $image: string|null
 // $href: string|null
 ?>
-<article class="bg-white shadow-sm border rounded-lg overflow-hidden">
+<article class="bg-gray shadow-sm border border-gray-700 rounded-lg overflow-hidden">
     <?php if (!empty($image)): ?>
         <img src="<?= esc($image) ?>" alt="<?= esc($title ?? '') ?>" class="w-full h-40 object-cover">
     <?php endif; ?>
@@ -15,10 +15,10 @@
             <h3 class="mb-2 font-semibold text-lg"><?= esc($title) ?></h3>
         <?php endif; ?>
         <?php if (!empty($excerpt)): ?>
-            <p class="mb-4 text-gray-600 text-sm"><?= esc($excerpt) ?></p>
+            <p class="mb-4 text-white-600 text-sm"><?= esc($excerpt) ?></p>
         <?php endif; ?>
         <?php if (!empty($href)): ?>
-            <a href="<?= esc($href) ?>" class="inline-block font-medium text-blue-600 text-sm">Read more</a>
+            <a href="<?= esc($href) ?>" class="inline-block font-medium text-red-600 text-sm">Read more</a>
         <?php endif; ?>
     </div>
 </article>
