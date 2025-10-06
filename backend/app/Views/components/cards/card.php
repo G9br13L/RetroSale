@@ -6,7 +6,7 @@
 // $image: string|null
 // $href: string|null
 ?>
-<article class="bg-gray shadow-sm border border-gray-700 rounded-lg overflow-hidden">
+<article class="bg-gray shadow-sm border border-gray-900 rounded-lg overflow-hidden">
     <?php if (!empty($image)): ?>
         <img src="<?= esc($image) ?>" alt="<?= esc($title ?? '') ?>" class="w-full h-40 object-cover">
     <?php endif; ?>

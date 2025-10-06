@@ -22,12 +22,22 @@
         body {
             margin: 0;
             padding: 0;
-            background-image: url('https://plus.unsplash.com/premium_photo-1687854992749-e15cba89631d?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             font-family: Arial, sans-serif;
             color: #f9fafb;
+        }
+
+
+        /* === Landing Page Background === */
+        body.landing-bg {
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://plus.unsplash.com/premium_photo-1687854992749-e15cba89631d?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         main {

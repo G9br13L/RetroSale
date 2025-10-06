@@ -3,7 +3,8 @@
 
 <?= view('components/head', ['title' => 'Games and Consoles']) ?>
 
-<body>
+<body class="landing-bg">
+
     <!-- Header -->
     <?= view('components/header') ?>
 
