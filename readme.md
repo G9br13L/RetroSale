@@ -4,7 +4,7 @@
 <br/>
 
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
+  <a href="https://github.com/G9br13L/RetroSale">
     <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
   </a>
 <!-- * Title Section -->
@@ -54,22 +54,29 @@ RetroSale offers old school video games ranging from PS1, PS2, Wii, DS, and 3DS 
 
 ## Overview
 
-This template provides a **minimal CodeIgniter 4 project layout** with conventions for file organization, commit practices, and simple modules.
+This project provides a **modern front-end layout for Retrosale**, an online store specializing in **retro consoles, games, and gadgets** — such as Nintendo 3DS, DS, PS1, PS2, Wii, and digital cameras.
 
-It is designed to be **easy to start with** and a **reference for adding new features**.
+It is designed to be **clean, reusable, and modular**, allowing for easy customization and consistent UI across all pages.
 
-* **Purpose**: a clean starting point for CI4 apps.
-* **Audience**: developers who want a predictable structure and quick onboarding.
+- **Purpose**: To deliver a visually consistent and user-friendly interface for showcasing retro gaming products.
+- **Audience**: Developers and designers building or extending Retrosale’s e-commerce frontend.
 
 ### Key Components
 
-These are **sample modules** included (or suggested) for learning how to add features:
+These are the **core UI components** included (or suggested) for building and styling Retrosale’s pages:
 
-| Component                 | Purpose                                                             | Notes                                                   |
-| ------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------- |
-| **Auth (Sample)**         | Basic login/logout and role check (admin/user).                     | Uses CI4 sessions + MySQL `users` table.                |
-| **CRUD Module**           | Example entity (`Posts` or `Tasks`) with create/read/update/delete. | Demonstrates Controller → Service → Repository pattern. |
-| **Scheduler (Sample)**    | Simple to-do list with due dates.                                   | Shows how to extend with new tables and services.       |
+| Component                | Purpose                                                          | Notes                      |
+|--------------------------|------------------------------------------------------------------|----------------------------|
+| **Button_primary**       | Main action button (e.g., “Buy Now”, “Add to Cart”).             | consistent button reuse    |
+| **Button_secondary**     | Secondary actions such as “View Details” or “Back”.              | consistent button reuse    |
+| **Button_border**        | Bordered variant for neutral actions.                            | consistent button reuse    |
+| **Button_link**          | Minimal inline action styled as a text link.                     | consistent button reuse    |
+| **Card**                 | Standard card layout for displaying products.                    | reusable card layout       |
+| **Card_stat**            | Card variation for showing store stats or highlights.            | reusab;e card highlight    |
+| **Service_card**         | Used to describe services like shipping, warranty, or trade-ins. | reusable card for services |
+| **Header**               | Top navigation bar with logo, links, and cart icon.              | reusable header            |
+| **Footer**               | Bottom section with contact info, social links, and policies.    | reusable footer            |
+| **CTA (Call-to-Action)** | Section encouraging purchases or subscriptions.                  | reusable CTA               |
 
  <!-- ! Start simple. Use these modules as **learning samples**; extend or replace them based on your project’s needs. -->
 
