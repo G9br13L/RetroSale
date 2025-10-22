@@ -32,9 +32,9 @@ class Admin extends BaseController
             'requestsCount' => $requestsCount,
             'servicesCount' => $servicesCount,
         ]);
-   }
-  
-   public function showServicesPage()
+    }
+
+    public function showServicesPage()
     {
         try {
             // Persist service to database using ServicesModel
@@ -74,6 +74,6 @@ class Admin extends BaseController
             'servicesCount' => $servicesCount,
             'availableServicesCount' => $availableServicesCount,
             'notAvailableServicesCount' => $notAvailableServicesCount,
-          });
+        ]);
     }
 }
