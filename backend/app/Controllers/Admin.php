@@ -28,7 +28,7 @@ class Admin extends BaseController
         }
 
         // Load the dashboard view with data
-        return view('admin/dashboardadmin', [
+        return view('/admin/dashboardadmin', [
             'requestsCount' => $requestsCount,
             'servicesCount' => $servicesCount,
         ]);
@@ -67,7 +67,7 @@ class Admin extends BaseController
         }
 
         // Load the admin/services view
-        return view('admin/services', [
+        return view('/admin/services', [
             'title' => 'Services',
             'active' => 'services',
             'services' => $services,
