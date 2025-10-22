@@ -1,0 +1,24 @@
+<?php
+// Component: cards/card.php
+// Data contract:
+// $title: string
+// $excerpt: string
+// $image: string|null
+// $href: string|null
+?>
+<article class="bg-gray shadow-sm border border-gray-700 rounded-lg overflow-hidden">
+    <?php if (!empty($image)): ?>
+        <img src="<?= esc($image) ?>" alt="<?= esc($title ?? '') ?>" class="w-full h-40 object-cover">
+    <?php endif; ?>
+    <div class="p-4">
+        <?php if (!empty($title)): ?>
+            <h3 class="mb-2 font-semibold text-lg"><?= esc($title) ?></h3>
+        <?php endif; ?>
+        <?php if (!empty($excerpt)): ?>
+            <p class="mb-4 text-white-600 text-sm"><?= esc($excerpt) ?></p>
+        <?php endif; ?>
+        <?php if (!empty($href)): ?>
+            <a href="<?= esc($href) ?>" class="inline-block font-medium text-red-600 text-sm">Read more</a>
+        <?php endif; ?>
+    </div>
+</article>

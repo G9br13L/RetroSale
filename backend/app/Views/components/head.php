@@ -10,200 +10,115 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title><?= esc($title ?? null ? $title . ": " : "") ?>Sunset Funeral Homes</title>
+    <title><?= esc($title ?? null ? $title . ": " : "") ?>RetroSale</title>
 
-    <!-- Default CDN includes -->
-    <!-- Google Fonts: Playfair Display + Lato (global) -->
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CDN -->
+    <!-- Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- Font Awsome CDN -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Global base typography -->
     <style>
-        :root {
-            --sage-dark: #6F8E78;
-            --sage: #8DAA91;
-            --sage-light: #CFE6D7;
-
-            --rose-dark: #A87D79;
-            --rose: #C7A6A0;
-            --rose-light: #EDD9D6;
-
-            --stone-dark: #d6d6d6ff;
-            --stone: #aaaaaaff;
-            --stone-light: #c2c2c2ff;
-        }
-
-        .swatch {
-            width: 100%;
-            height: 3rem;
-            border-radius: .375rem;
-            border: 1px solid rgba(0, 0, 0, 0.06);
-        }
-
-        /* Button color utilities using design tokens */
-        .btn-sage {
-            background: var(--sage-dark);
-            color: white;
-            transition: all;
-            transition-duration: 300ms;
-        }
-
-        .btn-sage:hover {
-            background: var(--sage);
-        }
-
-        .btn-sage-dark {
-            background: var(--sage);
-            color: white;
-            transition: all;
-            transition-duration: 300ms;
-        }
-
-        .btn-sage-dark:hover {
-            background: var(--sage-dark);
-        }
-
-        .btn-rose {
-            background: var(--rose-dark);
-            color: white;
-            transition: all;
-            transition-duration: 300ms;
-        }
-
-        .btn-rose:hover {
-            background: var(--rose);
-        }
-
-        .btn-rose-dark {
-            background: var(--rose);
-            color: white;
-            transition: all;
-            transition-duration: 300ms;
-        }
-
-        .btn-rose-dark:hover {
-            background: var(--rose-dark);
-        }
-
-        .btn-border {
-            border-color: var(--rose);
-            border-width: 2px;
-            color: var(--rose);
-            font-weight: 600;
-            transition: all;
-            transition-duration: 300ms;
-        }
-
-        .btn-border:hover {
-            color: white;
-            background: var(--rose);
-        }
-
-        .btn-border-dark {
-            border-color: var(--rose-dark);
-            border-width: 2px;
-            color: var(--rose-dark);
-            font-weight: 600;
-            transition: all;
-            transition-duration: 300ms;
-        }
-
-        .btn-border-dark:hover {
-            color: white;
-            background: var(--rose-dark);
-        }
-
-        .btn-disabled {
-            background-color: var(--stone);
-            color: white;
-            cursor: not-allowed;
-        }
-
-        /* Header CTA uses the main accent (sage-dark) */
-        .header-cta {
-            background: var(--sage-dark);
-            color: white;
-        }
-
-        .header-cta:hover {
-            background: var(--sage);
-        }
-
-        /* Small token-driven utilities */
-        .text-sage-dark {
-            color: var(--sage-dark);
-        }
-
-        .text-sage {
-            color: var(--sage);
-        }
-
-        .bg-sage-light {
-            background: var(--sage-light);
-        }
-
-        .bg-sage {
-            background: var(--sage);
-        }
-
-        .bg-sage-dark {
-            background: var(--sage-dark);
-        }
-
-        .bg-stone-light {
-            background: var(--stone-light);
-        }
-
-        /* Custom scrollbar styling using sage-light token (#CFE6D7) */
-        /* WebKit-based browsers */
-        ::-webkit-scrollbar {
-            width: 12px;
-            height: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--sage-light);
-            border-radius: 8px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--sage) 0%, var(--sage-dark) 100%);
-            border-radius: 8px;
-            border: 3px solid rgba(0, 0, 0, 0.03);
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, var(--sage-dark) 0%, var(--sage) 100%);
-        }
-
-        /* Firefox */
-        * {
-            scrollbar-width: thin;
-            scrollbar-color: var(--sage-dark) var(--sage-light);
-        }
-
-        /* Utility class to apply custom scrollbars to specific containers */
-        .custom-scroll {
-            overflow: auto;
-        }
-
-        /* Base typography */
-        html,
+        /* === Global RetroSale Theme (Universal Base) === */
         body {
-            font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: #f9fafb;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-family: 'Playfair Display', Georgia, serif;
+        /* === Base main layout used globally === */
+        main {
+            background-color: rgba(59, 60, 60, 0.9);
+            min-height: 100vh;
+        }
+
+        /* === Headings === */
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* === ADMIN DASHBOARD SPECIFIC STYLES === */
+        body.admin-body {
+            background-color: #4c4c4cff;
+            /* light neutral gray for contrast */
+            color: #ffffffff;
+            /* dark slate text for admin readability */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .admin-body main {
+            flex: 1;
+            display: flex;
+            gap: 2rem;
+            padding: 2.5rem;
+            background-color: #4c4c4cff;
+            /* same gray tone for seamless background */
+        }
+
+        .admin-sidebar {
+            width: 16rem;
+            background: linear-gradient(180deg, #f3f4f6 0%, #e5e7eb 100%);
+            border: 1px solid #d1d5db;
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.25rem;
+        }
+
+        .admin-content {
+            flex: 1;
+            background: #f9fafb;
+            border: 1px solid #d1d5db;
+            border-radius: 0.75rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+        }
+
+        .admin-sidebar h4,
+        .admin-sidebar h5 {
+            color: #1f2937;
+        }
+
+        .admin-nav a {
+            display: block;
+            padding: 0.6rem 1rem;
+            margin-bottom: 0.25rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            color: #ffffffff;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .admin-nav a.active {
+            background-color: #ef4444;
+            /* RetroSale red accent */
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .admin-nav a:hover:not(.active) {
+            background-color: #d1d5db;
+        }
+
+        /* Optional slight blur/glow feel for admin cards */
+        .admin-panel {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(6px);
+            border: 1px solid #d1d5db;
+            border-radius: 0.75rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
         }
     </style>
 </head>
