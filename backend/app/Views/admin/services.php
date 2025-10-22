@@ -50,3 +50,18 @@
 </body>
 
 </html>
+
+<script>
+    function toggleModal(id, show = true) {
+        const modal = document.getElementById(id);
+        if (!modal) return;
+        if (show) modal.classList.replace('hidden', 'flex');
+        else modal.classList.replace('flex', 'hidden');
+    }
+    document.addEventListener('click', (e) => {
+        if (e.target.matches('[data-modal-target]')) {
+            const id = e.target.getAttribute('data-modal-target');
+            toggleModal(id, true);
+        }
+    });
+</script>
