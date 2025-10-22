@@ -18,6 +18,7 @@ class ServicesModel extends Model
         'description',
         'price',
         'is_active',
+        'is_available',
         'created_at',
         'updated_at'
     ];

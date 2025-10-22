@@ -15,4 +15,6 @@ $routes->get('/moodboard', 'Users::moodboard');
 
 $routes->get('/roadmap', 'Users::roadmap');
 
-$routes->get('admin/dashboard', 'Admin::showDashboardPage');
+$routes->get('/admin/dashboard', 'Admin::showDashboardPage');
+
+$routes->get('/admin/services', 'Admin::showServicesPage');

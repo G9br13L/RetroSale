@@ -518,5 +518,126 @@
             border-radius: 0.75rem;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
             padding: 1.5rem;
+
+            /* === SERVICES ADMIN PAGE === */
+            body.services-body {
+                background:
+                    linear-gradient(rgba(76, 76, 76, 0.85), rgba(76, 76, 76, 0.85)),
+                    url('https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                color: #f9fafb;
+            }
+
+            .services-body main {
+                background-color: rgba(31, 41, 55, 0.85);
+                border-radius: 0.75rem;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            }
+
+            .services-body h2 {
+                color: #f3f4f6;
+                border-bottom: 2px solid #ef4444;
+                display: inline-block;
+                padding-bottom: 0.25rem;
+            }
+
+            /* Stats cards layout tweaks */
+            #serviceStats .card-stat {
+                background: rgba(255, 255, 255, 0.08);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(8px);
+                border-radius: 0.75rem;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            #serviceStats .card-stat:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+            }
+
+            /* Buttons */
+            .btn-border {
+                border: 1px solid #f87171;
+                background-color: transparent;
+                color: #f87171;
+            }
+
+            .btn-border:hover {
+                background-color: #ef4444;
+                color: #fff;
+            }
+
+            /* Table styling (services list) */
+            table.services-table {
+                width: 100%;
+                border-collapse: collapse;
+                background: rgba(255, 255, 255, 0.1);
+                color: #f3f4f6;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            table.services-table th,
+            table.services-table td {
+                padding: 0.75rem 1rem;
+                text-align: left;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            table.services-table th {
+                background: rgba(255, 255, 255, 0.15);
+                font-weight: 600;
+                color: #ffffff;
+            }
+
+            table.services-table tr:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            /* Modal overlay for create/edit service */
+            .modal-overlay {
+                background: rgba(0, 0, 0, 0.7);
+                position: fixed;
+                inset: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .modal-box {
+                background: rgba(31, 41, 55, 0.95);
+                padding: 2rem;
+                border-radius: 0.75rem;
+                width: 90%;
+                max-width: 480px;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+            }
+
+            .modal-box h3 {
+                margin-bottom: 1rem;
+                font-size: 1.25rem;
+                color: #f3f4f6;
+                border-bottom: 2px solid #ef4444;
+                padding-bottom: 0.25rem;
+            }
+
+            .modal-box input,
+            .modal-box textarea {
+                width: 100%;
+                background: rgba(255, 255, 255, 0.1);
+                border: none;
+                border-radius: 0.5rem;
+                color: #fff;
+                padding: 0.75rem;
+                margin-bottom: 1rem;
+            }
+
+            .modal-box input:focus,
+            .modal-box textarea:focus {
+                background: rgba(255, 255, 255, 0.15);
+                outline: 2px solid #ef4444;
+            }
     </style>
 </head>
