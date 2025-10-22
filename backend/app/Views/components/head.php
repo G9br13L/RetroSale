@@ -8,17 +8,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title><?= esc($title ?? null ? $title . ": " : "") ?>RetroSale</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <!-- Tailwind -->
+    <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <style>
-        /* === Global RetroSale Theme (Universal Base) === */
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -36,17 +29,6 @@
             color: #f9fafb;
         }
 
-
-        /* === Landing Page Background === */
-        body.landing-bg {
-            background:
-                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('https://plus.unsplash.com/premium_photo-1687854992749-e15cba89631d?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
         main {
             background-color: rgba(59, 60, 60, 0.9);
             min-height: 100vh;
@@ -59,78 +41,6 @@
             margin-bottom: 2rem;
         }
 
-        /* === ADMIN DASHBOARD SPECIFIC STYLES === */
-        body.admin-body {
-            background-color: #4c4c4cff;
-            /* light neutral gray for contrast */
-            color: #ffffffff;
-            /* dark slate text for admin readability */
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .admin-body main {
-            flex: 1;
-            display: flex;
-            gap: 2rem;
-            padding: 2.5rem;
-            background-color: #4c4c4cff;
-            /* same gray tone for seamless background */
-        }
-
-        .admin-sidebar {
-            width: 16rem;
-            background: linear-gradient(180deg, #f3f4f6 0%, #e5e7eb 100%);
-            border: 1px solid #d1d5db;
-            border-radius: 0.75rem;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            padding: 1.25rem;
-        }
-
-        .admin-content {
-            flex: 1;
-            background: #f9fafb;
-            border: 1px solid #d1d5db;
-            border-radius: 0.75rem;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-            padding: 2rem;
-        }
-
-        .admin-sidebar h4,
-        .admin-sidebar h5 {
-            color: #1f2937;
-        }
-
-        .admin-nav a {
-            display: block;
-            padding: 0.6rem 1rem;
-            margin-bottom: 0.25rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            color: #ffffffff;
-            transition: background-color 0.2s, color 0.2s;
-        }
-
-        .admin-nav a.active {
-            background-color: #ef4444;
-            /* RetroSale red accent */
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .admin-nav a:hover:not(.active) {
-            background-color: #d1d5db;
-        }
-
-        /* Optional slight blur/glow feel for admin cards */
-        .admin-panel {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(6px);
-            border: 1px solid #d1d5db;
-            border-radius: 0.75rem;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-            padding: 1.5rem;
         /* === Landing Page Grid Section === */
         .featured-section {
             padding: 1rem 2.5rem;
@@ -534,5 +444,79 @@
             margin-top: 0.5rem;
             display: inline-block;
         }
+
+        /* style for dashboard admin */
+        /* === ADMIN DASHBOARD SPECIFIC STYLES === */
+        body.admin-body {
+            background-color: #4c4c4cff;
+            /* light neutral gray for contrast */
+            color: #ffffffff;
+            /* dark slate text for admin readability */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .admin-body main {
+            flex: 1;
+            display: flex;
+            gap: 2rem;
+            padding: 2.5rem;
+            background-color: #4c4c4cff;
+            /* same gray tone for seamless background */
+        }
+
+        .admin-sidebar {
+            width: 16rem;
+            background: linear-gradient(180deg, #f3f4f6 0%, #e5e7eb 100%);
+            border: 1px solid #d1d5db;
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.25rem;
+        }
+
+        .admin-content {
+            flex: 1;
+            background: #f9fafb;
+            border: 1px solid #d1d5db;
+            border-radius: 0.75rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+        }
+
+        .admin-sidebar h4,
+        .admin-sidebar h5 {
+            color: #1f2937;
+        }
+
+        .admin-nav a {
+            display: block;
+            padding: 0.6rem 1rem;
+            margin-bottom: 0.25rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            color: #ffffffff;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .admin-nav a.active {
+            background-color: #ef4444;
+            /* RetroSale red accent */
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .admin-nav a:hover:not(.active) {
+            background-color: #d1d5db;
+        }
+
+        /* Optional slight blur/glow feel for admin cards */
+        .admin-panel {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(6px);
+            border: 1px solid #d1d5db;
+            border-radius: 0.75rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
     </style>
 </head>
