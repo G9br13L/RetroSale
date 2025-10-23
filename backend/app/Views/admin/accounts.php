@@ -42,8 +42,9 @@
                         ]) ?>
                         <?= view('components/cards/card_stat', [
                             'title' => 'Not Verified Accounts',
-                            'value' => $nonVerfiedEmailAccountsCount
+                            'value' => $nonVerifiedEmailAccountsCount
                         ]) ?>
+
                     </div>
 
                     <!-- Management Tools -->
