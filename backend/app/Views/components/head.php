@@ -642,9 +642,32 @@
 
             /* === Admin Accounts Page Styling === */
             body.admin-accounts-body {
-                background-color: #f9fafb;
-                font-family: 'Inter', sans-serif;
-                color: #1f2937;
+                background-color: #3e3e3e;
+                /* full gray background */
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                min-height: 100vh;
+            }
+
+            body.admin-accounts-body>* {
+                position: relative;
+                z-index: 1;
+            }
+
+            html,
+            body {
+                background-color: #3e3e3e;
+            }
+
+
+            body.admin-accounts-body,
+            body.admin-accounts-body main {
+                width: 100%;
+                min-height: 100vh;
+                margin: 0;
+                padding: 0;
+                background-color: #3e3e3eff;
             }
 
             .admin-accounts-body h2 {

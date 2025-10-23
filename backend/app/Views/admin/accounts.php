@@ -10,12 +10,13 @@
 <html lang="en">
 <?= view('components/head', ['title' => 'Admin — Accounts']) ?>
 
-<body class="bg-gray-50 min-h-screen font-sans text-slate-900 admin-accounts-body">
+<body class="w-full min-h-screen font-sans text-slate-900 admin-accounts-body">
 
     <!-- Header -->
     <?= view('components/header') ?>
 
-    <main class="mx-auto px-6 py-10 max-w-6xl">
+    <main class="px-10 py-10 w-full">
+
         <div class="md:flex md:space-x-6">
             <!-- Sidebar -->
             <?= view('components/aside/admin_manager', ['active' => 'accounts']) ?>

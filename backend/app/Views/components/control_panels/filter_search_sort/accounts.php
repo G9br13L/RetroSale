@@ -38,7 +38,7 @@
     <div class="flex gap-2 ml-auto">
         <?= view('components/buttons/button_border', [
             'id' => 'accountsResetBtn',
-            'label' => '<i class="mr-1 fa-rotate-left fa-solid"></i> Reset',
+            'label' => 'Reset',
             'attributes' => 'type="button"'
         ]) ?>
     </div>
