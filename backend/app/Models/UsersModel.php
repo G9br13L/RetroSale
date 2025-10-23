@@ -10,13 +10,11 @@ class UsersModel extends Model
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
 
-    // If you plan to use an Entity (optional), define it here
-    // Otherwise, set this to 'array' or remove it
-    protected $returnType       = 'array'; // You can switch to '\App\Entities\User' if you create one
+    protected $returnType       = '\App\Entities\User'; // You can switch to '\App\Entities\User' if you create one
     protected $useSoftDeletes   = true;
     protected $protectFields    = true;
 
-    protected $allowedFields    = [
+    protected $allowedFields = [
         'first_name',
         'middle_name',
         'last_name',
@@ -28,9 +26,6 @@ class UsersModel extends Model
         'newsletter',
         'gender',
         'profile_image',
-        'created_at',
-        'updated_at',
-        'deleted_at',
     ];
 
     // Insert behavior
