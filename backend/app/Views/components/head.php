@@ -733,5 +733,24 @@
             .btn-sage:hover {
                 background-color: #16a34a;
             }
+
+            body.admin-accounts .retro-control-panel {
+                background: var(--retro-panel-bg, rgba(255, 255, 255, 0.85));
+                border-radius: 1rem;
+                border: 1px solid rgba(200, 200, 200, 0.4);
+                backdrop-filter: blur(6px);
+                transition: 0.3s ease all;
+            }
+
+            body.admin-accounts .retro-control-panel:hover {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            }
+
+            body.admin-accounts .retro-control-panel input,
+            body.admin-accounts .retro-control-panel select {
+                font-family: 'Inter', sans-serif;
+                background-color: #fff;
+                color: #333;
+            }
     </style>
 </head>
