@@ -639,5 +639,99 @@
                 background: rgba(255, 255, 255, 0.15);
                 outline: 2px solid #ef4444;
             }
+
+            /* === Admin Accounts Page Styling === */
+            body.admin-accounts-body {
+                background-color: #f9fafb;
+                font-family: 'Inter', sans-serif;
+                color: #1f2937;
+            }
+
+            .admin-accounts-body h2 {
+                color: #1e293b;
+                letter-spacing: -0.02em;
+            }
+
+            #accountStats .card-stat {
+                background: linear-gradient(to bottom right, #ffffff, #f3f4f6);
+                border: 1px solid #e5e7eb;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            #accountStats .card-stat:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .admin-accounts-body table {
+                width: 100%;
+                border-collapse: collapse;
+                background-color: #fff;
+                border-radius: 0.75rem;
+                overflow: hidden;
+            }
+
+            .admin-accounts-body table thead {
+                background-color: #f3f4f6;
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                color: #6b7280;
+            }
+
+            .admin-accounts-body table tbody tr:hover {
+                background-color: #f9fafb;
+            }
+
+            .admin-accounts-body table td,
+            .admin-accounts-body table th {
+                padding: 0.75rem 1rem;
+                text-align: left;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            .admin-accounts-body .btn-create {
+                background-color: #2563eb;
+                color: #fff;
+                font-weight: 500;
+                padding: 0.5rem 1.25rem;
+                border-radius: 0.5rem;
+                transition: background-color 0.2s ease;
+            }
+
+            .admin-accounts-body .btn-create:hover {
+                background-color: #1d4ed8;
+            }
+
+            /* === Accounts Table Enhancements === */
+            .accounts-table th {
+                font-weight: 600;
+                color: #475569;
+            }
+
+            .accounts-table td {
+                font-size: 0.875rem;
+            }
+
+            .accounts-table tr:hover td {
+                background-color: #f9fafb;
+            }
+
+            .accounts-table img {
+                transition: transform 0.2s ease;
+            }
+
+            .accounts-table img:hover {
+                transform: scale(1.05);
+            }
+
+            .btn-sage {
+                background-color: #22c55e;
+                color: white;
+            }
+
+            .btn-sage:hover {
+                background-color: #16a34a;
+            }
     </style>
 </head>
