@@ -14,7 +14,7 @@ $fieldErrors = $fieldErrors ?? [];
 <div class="flex justify-end mb-4">
     <?= view('components/buttons/button_primary', [
         'id' => 'btnCreateAccount',
-        'label' => '<i class="fa-solid fa-plus"></i> Create account',
+        'label' => 'Create account',
         'attributes' => 'type="button"',
     ]) ?>
 </div>
