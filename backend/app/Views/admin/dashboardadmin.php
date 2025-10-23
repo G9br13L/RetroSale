@@ -25,7 +25,7 @@
 
                 <?php if (!is_numeric($requestsCount) || !is_numeric($servicesCount)) : ?>
                     <?= view('components/cards/card', [
-                        'title' => 'Dashboard Error',
+                        'title' => 'No Requests Received yet',
                         'value' => 'Invalid data received.'
                     ]) ?>
                 <?php else : ?>
