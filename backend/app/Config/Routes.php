@@ -7,4 +7,18 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Users::index');
 
+$routes->get('/login', 'Users::login');
+
+$routes->get('/signup', 'Users::signup');
+
+$routes->get('/moodboard', 'Users::moodboard');
+
+$routes->get('/roadmap', 'Users::roadmap');
+
+$routes->get('/admin/dashboard', 'Admin::showDashboardPage');
+
+$routes->get('/admin/services', 'Admin::showServicesPage');
+
+$routes->get('/admin/accounts', 'Admin::showAccountsPage');
+
 $routes->get('/admin/inquiries', 'Admin::showInquiriesPage');
