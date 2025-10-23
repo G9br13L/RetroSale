@@ -14,7 +14,8 @@
 <body class="min-h-screen font-sans text-slate-900 admin-inquiries-body">
     <?= view('components/header') ?>
 
-    <main class="xl:mx-auto px-2 xl:px-6 py-10 max-w-6xl">
+    <main class="px-4 xl:px-10 py-10 w-full">
+
         <div class="xl:flex xl:space-x-6">
             <?= view('components/aside/admin_manager', ['active' => 'inquiries']) ?>
 
