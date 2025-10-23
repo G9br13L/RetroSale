@@ -775,5 +775,81 @@
                 background-color: #fff;
                 color: #333;
             }
+
+            /* === Admin Inquiries Page Styling === */
+            body.admin-inquiries-body {
+                background-color: #3e3e3e;
+                font-family: 'Inter', sans-serif;
+                color: #f9fafb;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                min-height: 100vh;
+            }
+
+            .admin-inquiries-body h2 {
+                color: #f1f5f9;
+                letter-spacing: -0.02em;
+            }
+
+            /* Stats Cards */
+            #requestsStats .card-stat {
+                background: linear-gradient(to bottom right, #ffffff, #f3f4f6);
+                border: 1px solid #e5e7eb;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            #requestsStats .card-stat:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Tables */
+            .admin-inquiries-body table {
+                width: 100%;
+                border-collapse: collapse;
+                background-color: #fff;
+                border-radius: 0.75rem;
+                overflow: hidden;
+            }
+
+            .admin-inquiries-body table thead {
+                background-color: #f3f4f6;
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                color: #6b7280;
+            }
+
+            .admin-inquiries-body table tbody tr:hover {
+                background-color: #f9fafb;
+            }
+
+            .admin-inquiries-body table td,
+            .admin-inquiries-body table th {
+                padding: 0.75rem 1rem;
+                text-align: left;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            /* Control Panel */
+            body.admin-inquiries-body .retro-control-panel {
+                background: var(--retro-panel-bg, rgba(255, 255, 255, 0.85));
+                border-radius: 1rem;
+                border: 1px solid rgba(200, 200, 200, 0.4);
+                backdrop-filter: blur(6px);
+                transition: 0.3s ease all;
+            }
+
+            body.admin-inquiries-body .retro-control-panel:hover {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            }
+
+            body.admin-inquiries-body .retro-control-panel input,
+            body.admin-inquiries-body .retro-control-panel select {
+                font-family: 'Inter', sans-serif;
+                background-color: #fff;
+                color: #333;
+            }
     </style>
 </head>

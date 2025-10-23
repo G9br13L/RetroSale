@@ -20,3 +20,5 @@ $routes->get('/admin/dashboard', 'Admin::showDashboardPage');
 $routes->get('/admin/services', 'Admin::showServicesPage');
 
 $routes->get('/admin/accounts', 'Admin::showAccountsPage');
+
+$routes->get('/admin/inquiries', 'Admin::showInquiriesPage');
