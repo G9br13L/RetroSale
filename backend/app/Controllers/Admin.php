@@ -9,7 +9,7 @@ use App\Models\RequestsModel;
 
 class Admin extends BaseController
 {
-    
+
     /**
      * Show the Admin Dashboard page
      */
@@ -78,8 +78,8 @@ class Admin extends BaseController
             'notAvailableServicesCount' => $notAvailableServicesCount,
         ]);
     }
-  
-  public function showAccountsPage()
+
+    public function showAccountsPage()
     {
         try {
             // Initialize UsersModel
@@ -116,10 +116,10 @@ class Admin extends BaseController
             'accountsCount' => $accountsCount,
             'verifiedEmailAccountsCount' => $verifiedEmailAccountsCount,
             'nonVerifiedEmailAccountsCount' => $nonVerifiedEmailAccountsCount,
-           ]);
+        ]);
     }
-  
-  public function showInquiriesPage()
+
+    public function showInquiriesPage()
     {
         try {
             // --- Load Models ---
@@ -188,5 +188,66 @@ class Admin extends BaseController
             'pendingRequestsCount'    => $pendingRequestsCount,
             'accountList'             => $accountList
         ]);
+    }
+
+    public function createAccount()
+    {
+        helper(['form', 'url']);
+
+        $userModel = new \App\Models\UsersModel();
+
+        // Validation rules
+        $validationRules = [
+            'first_name'       => 'required|min_length[2]',
+            'last_name'        => 'required|min_length[2]',
+            'email'            => 'required|valid_email|is_unique[users.email]',
+            'password'         => 'required|min_length[8]',
+            'password_confirm' => 'matches[password]',
+            'type'             => 'required',
+        ];
+
+        if (!$this->validate($validationRules)) {
+            // Validation failed — reload the accounts page with error messages
+            return view('admin/accounts', [
+                'errors' => $this->validator->getErrors(),
+                'old'    => $this->request->getPost(),
+                'accounts' => $userModel->where('account_status', 1)->findAll(),
+                'accountsCount' => $userModel->where('account_status', 1)->countAllResults(),
+                'verifiedEmailAccountsCount' => $userModel->where('account_status', 1)->where('email_activated', 1)->countAllResults(),
+                'nonVerifiedEmailAccountsCount' => $userModel->where('account_status', 1)->where('email_activated', 0)->countAllResults(),
+            ]);
+        }
+
+        // Handle profile image upload
+        $profileImage = $this->request->getFile('profile_image');
+        $imageName = 'default.png';
+        if ($profileImage && $profileImage->isValid() && !$profileImage->hasMoved()) {
+            $imageName = $profileImage->getRandomName();
+            $profileImage->move('uploads/profile_images', $imageName);
+        }
+
+        // Prepare data for insertion
+        $userData = [
+            'first_name'      => $this->request->getPost('first_name'),
+            'middle_name'     => $this->request->getPost('middle_name'),
+            'last_name'       => $this->request->getPost('last_name'),
+            'email'           => $this->request->getPost('email'),
+            'password_hash'   => $this->request->getPost('password'), // <-- model hashes it automatically
+            'type'            => $this->request->getPost('type'),
+            'gender'          => $this->request->getPost('gender'),
+            'profile_image'   => $imageName,
+            'newsletter'      => $this->request->getPost('newsletter') ?? 1,
+            'account_status'  => 1,
+            'email_activated' => 0,
+        ];
+
+        try {
+            $userModel->insert($userData);
+        } catch (\Exception $e) {
+            log_message('error', '[AdminController::createAccount] ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Failed to create account: ' . $e->getMessage());
+        }
+
+        return redirect()->to('/admin/accounts')->with('success', 'Account created successfully!');
     }
 }

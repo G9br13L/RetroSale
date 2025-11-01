@@ -27,12 +27,8 @@
         class="shadow-inner px-3 py-2 border border-slate-300 rounded-md focus:outline-none w-full sm:w-48">
         <option value="all">Type — all</option>
         <option value="client">Client</option>
-        <option value="driver">Driver</option>
-        <option value="embalmer">Embalmer</option>
         <option value="staff">Staff</option>
-        <option value="florist">Florist</option>
         <option value="manager">Manager</option>
-        <option value="employee">Employee (non-client)</option>
     </select>
 
     <div class="flex gap-2 ml-auto">
